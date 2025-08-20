@@ -1,5 +1,265 @@
+/* === RESET === */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* === NAVBAR === */
+header {
+  background: #5a5a67;
+  padding: 1rem;
+  opacity: 0.9;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar ul {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.navbar ul li a:hover {
+  text-decoration: underline;
+  color: rgb(230, 223, 215);
+}
+
+/* === HOME SECTION === */
+#HOME {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  padding: 10rem 1rem;
+  background: linear-gradient(120deg, #8aa2b7, #161717);
+  color: white;
+}
+
+#HOME .h1 {
+  font-size: 6rem;
+  margin-bottom: 1rem;
+  text-shadow: 6px 6px 10px rgba(226, 130, 130, 0.3);
+}
+
+#HOME .p {
+  font-size: 2.3rem;
+}
+
+/* === ABOUT SECTION === */
+#ABOUT_AS {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 3rem 1rem;
+  flex-wrap: wrap;
+  background: rgb(180, 216, 230);
+}
+
+#ABOUT_AS .pa {
+  max-width: 600px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+#ABOUT_AS img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* === PROJECTS SECTION === */
+#PROJECTS {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+#PROJECTS h1 {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: bold;
+  color: #d74343;
+  font-size: 2rem;
+  text-shadow: 6px 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+#PROJECTS #projects {
+  display: inline-block;
+  margin: 10px;
+}
+
+#PROJECTS img {
+  width: 280px;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+#PROJECTS img:hover {
+  transform: scale(1.05);
+}
+
+.arrow {
+  display: block;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #d74343;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+.arrow:hover {
+  transform: scale(1.05);
+  text-decoration: underline;
+  color: #e28d8d;
+}
+#projects a p {
+  /* text-align: center; */
+  color: whitesmoke;
+  background-color: darkgray;
+  margin: 0 auto;
+  font-size: 22px;
+  text-decoration: none;
+}
+#projects a {
+  text-decoration: none;
+}
+#projects p span {
+  opacity: 0%;
+}
+#projects p:hover span {
+  opacity: 100%;
+  transition: opacity 0.25px ease-in;
+}
+
+/* === CONTACT SECTION === */
+#CONTACT {
+  width: 100%;
+  height: 80vh;
+  color: #fff;
+  padding: 3rem 1rem;
+  text-align: center;
+  background: linear-gradient(-240deg, rgb(24, 24, 24, 0.9), rgb(66, 66, 66));
+}
+
+#CONTACT h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+#CONTACT .icon a {
+  display: inline-block;
+  margin: 10px;
+  color: #dedbdb;
+  font-size: 1.1rem;
+  text-decoration: none;
+  margin-top: 50px;
+}
+
+#CONTACT .icon a i {
+  margin-right: 8px;
+  /* color: #0077ff; */
+}
+#CONTACT .icon a .fa-facebook {
+  color: rgb(44, 44, 230);
+}
+#CONTACT a .fa-github {
+  color: rgb(121, 121, 121);
+}
+#CONTACT a .fa-youtube {
+  color: red;
+}
+#CONTACT a .fa-discord {
+  color: deepskyblue;
+}
+
+/* === FOOTER === */
+footer {
+  /* background: #434343; */
+  color: white;
+  padding: 1rem;
+  margin-top: 70px;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+  /* margin-bottom: 10px; */
+}
+
+footer ul li {
+  margin: 0 10px;
+}
+
+footer ul li a {
+  color: white;
+}
+
+/* === RESPONSIVE DESIGN === */
+
+/* 📱 iPad Pro (width ≤ 1024px) */
+@media (max-width: 1024px) {
+  #HOME .h1 {
+    font-size: 2.5rem;
+  }
+
+  #ABOUT_AS {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #ABOUT_AS img {
+    margin-top: 20px;
+  }
+
+  #PROJECTS img {
+    width: 220px;
+  }
+}
+
+/* 💻 Laptops (width ≤ 1440px) */
+@media (max-width: 1440px) {
+  #HOME .h1 {
+    font-size: 5rem;
+  }
+  .navbar ul li a {
+    font-size: 1.5rem;
+  }
+  #PROJECTS img {
+    width: 260px;
+  }
+}
+
+/* 🖥 Desktops (larger than 1440px) */
+@media (min-width: 1441px) {
+  body {
+    max-width: 1400px;
+    margin: auto;
+  }
+  .navbar ul li a {
+    font-size: 2rem;
+  }
+  #HOME .h1 {
+    font-size: 4rem;
+  }
 }
